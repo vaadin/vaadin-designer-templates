@@ -1,0 +1,154 @@
+.root-layout.form-template-blue {
+	$root-background-color: #fff;
+    $template-font-size: 16px;
+    $template-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    
+    $dark-text-color: #323C3C;
+    $lighter-text-color: #959F9F;
+    
+    $billing-form-background: #f6f3f3;
+	$billing-form-border-color: #fff;
+	$form-text-field-border: #D0C7C7;
+	
+	$header-label-font-size: 1.618em;
+	$header-label-text-color: #000;
+	$header-label-border-color: #D0C7C7;
+	
+    $order-summary-background: #8CD211;
+    $order-summary-header-color: #fff;
+    $order-summary-header-border-color: #C8F08F;	
+    $order-summary-text-color: #fff;
+    $cancel-order-icon-color: #4B8400;    
+	$total-sum-border-color: #C8F08F;
+    $total-sum-text-color: #C8F08F;
+        
+	$header-bar-height: 100px;
+
+	background-color: $root-background-color;
+	padding: 60px;
+
+	.v-nativebutton {
+		background: none;
+		border: none;
+		
+		&:hover{
+			cursor: pointer;
+		}
+	}
+
+	.header-label {
+	    font-family: $template-font-family;
+		font-size: $header-label-font-size;
+		width: 100%;
+		margin-bottom: 20px;
+		color: $header-label-text-color;
+		border-bottom: 3px solid $header-label-border-color;
+	}
+	
+	.billing-formlayout {
+		background: $billing-form-background;
+		border: solid 1px $billing-form-border-color;
+		margin: 0 30px 0 0px;
+		float: left;
+		padding: 20px;
+		width: 100%;
+		max-width: 722px;
+		
+		.v-label {
+	       font-family: $template-font-family;
+		}
+		
+		.form-textfield {
+		    font-family: $template-font-family;
+			background: none;
+			border-radius: 0;
+			border: none;
+			box-shadow: none;
+			border-bottom: 2px solid $form-text-field-border;
+		}
+		
+		.email-field {
+			min-width: 250px;
+		}
+    }
+        
+    .order-summary-layout {
+		background-color: $order-summary-background;
+		float: right;
+		padding: 20px;
+         
+        .v-label {
+            font-family: $template-font-family;
+            color: $order-summary-text-color;
+        }         
+            
+        .header-label-small {
+			width: 100%;
+			text-transform: uppercase;
+            color: $order-summary-header-color;
+            border-bottom: 2px solid $order-summary-header-border-color;
+        }
+		
+		.cancel-order-button {
+			background: none;
+			border: none;
+			position: relative; 
+			margin-left: 15px;
+			margin-top: 10px;
+			padding: 0;
+			float: right;
+
+			.v-icon{
+				font-size: 25px;
+				width: 25px;
+				height: 25px;
+				line-height: 25px;
+				color: $cancel-order-icon-color;
+			}
+		}
+		
+		.order-sum {
+			position: absolute;
+			left: 170px;
+			text-align: right;
+			width: 150px;
+		}
+		
+		.total-sum {
+			border-top: solid 2px $total-sum-border-color; 
+			color: $total-sum-text-color !important;
+			font-size: 2em;
+			&:first-letter {
+				font-weight: 400;
+			}
+		}
+	}
+
+	&[width-range~="321px-768px"]{
+		padding: 10px;
+		
+		.billing-formlayout{
+			margin: 15px 0 0 0;
+			width: 100% !important;
+		}
+			
+		.order-summary-layout{
+			margin: 15px 0 0 0;
+		}
+	}
+	
+	&[width-range~="769px-1426px"]{
+		.billing-formlayout{
+			margin-bottom: 30px;
+		}
+		
+		.order-summary-layout{
+			float: left;
+		}
+	}
+}
+
+.form-template-blue[width-range~="321px-768px"],
+.form-template-blue[width-range~="769px-1426px"]{
+	visibility: visible;
+}

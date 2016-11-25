@@ -1,28 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
  <head>
- <style>
-// Workaround for a https://dev.vaadin.com/ticket/19170 to get hidden icons in some environments to show
-#responsive-application-template.valo-menu-responsive .valo-menu-part .valo-menu-item span.v-icon {
-	opacity: 1.0;
-}
- </style>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;THEME&quot;:&quot;designertemplate&quot;}">
+  <meta charset="UTF-8" name="vaadin-version" content="7.7.0">
  </head> 
  <body> 
-  <vaadin-horizontal-layout style-name="valo-menu-responsive" responsive="true" id="responsive-application-template" size-full="true"> 
+  <vaadin-horizontal-layout style-name="valo-menu-responsive" responsive id="responsive-application-template" size-full> 
    <vaadin-css-layout style-name="valo-menu"> 
     <vaadin-css-layout style-name="valo-menu-part"> 
-     <vaadin-horizontal-layout style-name="valo-menu-title" width-full="true" _id="menuTitle"> 
-      <vaadin-label size-auto="true" _id="menuTitleLabel" :middle="" :expand="">
+     <vaadin-horizontal-layout style-name="valo-menu-title" width-full _id="menuTitle"> 
+      <vaadin-label size-auto _id="menuTitleLabel" :middle :expand>
         The 
        <strong>Application</strong> 
       </vaadin-label> 
      </vaadin-horizontal-layout> 
-     <vaadin-button icon="fonticon://FontAwesome/f03a" style-name="primary small valo-menu-toggle" plain-text="" _id="menuToggle">
+     <vaadin-button icon="fonticon://FontAwesome/f03a" style-name="primary small valo-menu-toggle" plain-text _id="menuToggle">
        Menu 
      </vaadin-button> 
      <vaadin-css-layout style-name="valo-menuitems" _id="menuItems"> 
-      <vaadin-button icon="fonticon://FontAwesome/f007" primary-style-name="valo-menu-item" width-full="true" plain-text="" _id="userButton">
+      <vaadin-button icon="fonticon://FontAwesome/f007" primary-style-name="valo-menu-item" width-full plain-text _id="userButton">
         User 
       </vaadin-button> 
       <vaadin-button icon="fonticon://FontAwesome/f080" primary-style-name="valo-menu-item" _id="statusButton">
@@ -38,13 +34,13 @@
       <vaadin-button icon="fonticon://FontAwesome/f1de" primary-style-name="valo-menu-item" _id="settingsButton">
         Settings 
       </vaadin-button> 
-      <vaadin-button icon="fonticon://FontAwesome/f08b" primary-style-name="valo-menu-item" plain-text="" _id="logoutButton">
+      <vaadin-button icon="fonticon://FontAwesome/f08b" primary-style-name="valo-menu-item" plain-text _id="logoutButton">
         Logout 
       </vaadin-button> 
      </vaadin-css-layout> 
     </vaadin-css-layout> 
    </vaadin-css-layout> 
-   <vaadin-vertical-layout spacing="true" margin="true" _id="content" :expand=""></vaadin-vertical-layout> 
+   <vaadin-vertical-layout spacing margin _id="content" :expand></vaadin-vertical-layout> 
   </vaadin-horizontal-layout>  
  </body>
 </html>

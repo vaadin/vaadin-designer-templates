@@ -1,0 +1,7 @@
+@import "../valo/valo.scss";
+
+@mixin designertemplate {
+  @include valo;
+
+  // Insert your own theme rules here
+}

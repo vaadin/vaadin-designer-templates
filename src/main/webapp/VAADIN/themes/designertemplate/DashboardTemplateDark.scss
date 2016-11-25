@@ -1,0 +1,75 @@
+.root-layout.dashboard-view-template-dark {
+	$root-background-color: #000;
+	$template-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	$main-color: #6D7777;
+	$menu-color: #323C3C;
+	$header-label-font-size: 1.618em;
+	background-color: $root-background-color;
+	padding: 60px;
+	
+	.v-nativebutton{
+		background: none;
+		border: none;
+		
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	
+	.header-label{
+		font-size: $header-label-font-size;
+		font-family: $template-font-family;
+		width: 100%;
+		margin-bottom: 20px;
+		color: #586262;
+		border-bottom: 3px solid $menu-color;
+	}
+	
+	.header-label-small{
+	    font-family: $template-font-family;
+		width: 100%;
+		color: $main-color;
+        text-transform: uppercase;
+		border-bottom: 2px solid $menu-color;
+	}
+	
+	.dashboard-layout{
+		padding: 60px 60px 0 60px;
+	}
+    
+	.dashboard-item{
+		background: none;
+		border: solid 1px $menu-color;
+		margin: 0 30px 30px 0px;
+		padding: 15px;
+		color: $main-color;
+		
+		> .statistics-label{
+			margin-top: 15px;
+			font-family: $template-font-family;
+			
+			.statistics-value{
+				float: right;
+				font-weight: bold;
+			}
+		}
+	}
+    
+	&[width-range~="321px-768px"]{
+		padding: 10px;
+		
+		.dashboard-layout{
+			padding: 10px;
+		}
+		
+		.dashboard-item{
+			width: 100% !important;
+			min-width: 321px;
+			margin: 0;
+		}
+	}
+}
+
+.dashboard-view-template-dark[width-range~="321px-768px"]{
+	visibility: visible;
+}

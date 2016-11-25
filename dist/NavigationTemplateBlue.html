@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<style>
+.root-layout.navigation-template-blue {
+	$root-background-color: #ffffff;
+	$template-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 	
+	
+	$header-bar-background: #5AAAFA;
+	$header-bar-font-size: 16px;
+	$header-bar-text-color: #fff;
+	
+	$search-field-border: 0;
+	$search-field-bevel: 0;
+	$search-field-prompt-color: #fff;
+	$search-field-border-color: $header-bar-text-color;
+	$username-label-color: #fff;
+	
+	$side-bar-background: #000;
+	$menu-button-selected-text-color: #1A1314;
+	$menu-button-selected-background: $root-background-color;
+	$menu-button-text-color: #fff;
+	$menu-button-icon-color: #5AAAFA;
+	
+	
+	background-color: $root-background-color;
+	
+	.header-bar .v-nativebutton,
+	.side-bar .v-nativebutton {
+		background: none;
+		border: none;
+		
+		&:hover{
+			cursor: pointer;
+		}
+	}
+
+	.scroll-panel {
+		background-color: $root-background-color;
+        border: none;
+        border-radius: 0;		
+	}
+				
+	.header-bar {
+		background-color: $header-bar-background;
+		padding: 0px 15px 0 15px;
+		vertical-align: middle;
+		height: 65px;
+		
+		> * {
+			color: $header-bar-text-color;
+			float: right;
+			padding: 0;
+			line-height: 20px;
+			margin-left: 15px;
+			font-size: $header-bar-font-size;
+			font-family: $template-font-family;
+			
+			/** Vertically center everything **/ 
+			position: relative;
+			top: 50%;
+			-webkit-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+		}
+		
+		> .search-field {
+			background: none;
+			color: $search-field-prompt-color;
+			padding-left: 5px;
+			box-shadow: none;
+			border: $search-field-border;
+			border-bottom: solid 2px $search-field-border-color;
+			border-radius: 0;
+			font-style: italic;
+		}
+		
+		.user-name-label {
+		    color: $username-label-color;
+		}
+	}
+		
+	.side-bar {
+		background-color: $side-bar-background;
+		width: 100px;
+		
+		> .menu-button {
+			position: relative;
+			color: $menu-button-text-color;
+			height: 90px;
+			
+			&.selected{
+				background-color: $menu-button-selected-background; 
+			
+				.v-nativebutton-caption {
+					color: $menu-button-selected-text-color;
+				}
+		
+			}
+			
+			.v-nativebutton-caption {
+				font-family: $template-font-family;				
+				font-size: .7em;
+				text-transform: uppercase;
+				position: absolute;
+				bottom: 8px;
+				text-align: center;				
+				left: 0;
+				right: 0;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.v-icon {
+				color: $menu-button-icon-color;
+				position: absolute;
+				font-size: 35px;
+				margin-left: auto;
+				margin-right: auto;
+				top: 10px;
+				left: 0;
+				right: 0;
+			}
+		}
+	}	
+   
+	.dashboard-layout {
+		padding: 60px 60px 0 60px;
+	}
+    	
+	&[width-range~="321px-768px"] {
+		.dashboard-layout{
+			padding: 10px;
+		}
+		
+		.dashboard-item {
+			width: 100% !important;
+			min-width: 321px;
+			margin: 0;
+		}
+	
+		.side-bar {
+			width: 60px;
+			
+			> .menu-button{
+			
+				height: 50px;
+			
+				> .v-nativebutton-caption{
+					visibility: hidden;
+				}
+				
+				> .v-icon{
+					top: 0;
+				}
+			}
+		}
+		
+		.header-bar {
+			height: 45px;
+			padding: 2px;	
+		}
+	}
+}
+
+.navigation-template-blue[width-range~="321px-768px"]{
+	visibility: visible;
+}
+</style>
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src&quot;,&quot;THEME&quot;:&quot;designertemplate&quot;}">
+  <meta charset="UTF-8" name="vaadin-version" content="7.7.0">
+ </head> 
+ <body> 
+  <vaadin-vertical-layout style-name="root-layout navigation-template-vaadin" responsive size-full> 
+   <vaadin-css-layout style-name="header-bar" width-full _id="header_bar"> 
+    <vaadin-native-button icon="fonticon://FontAwesome/f078" style-name="user-menu" width="20px" height="20px" plain-text _id="user_menu"></vaadin-native-button> 
+    <vaadin-label style-name="user-name-label" width="79px" plain-text _id="user_name_label">
+      John Smith 
+    </vaadin-label> 
+    <vaadin-text-field icon="fonticon://FontAwesome/f002" input-prompt="Search..." style-name="search-field" _id="search_field"></vaadin-text-field> 
+   </vaadin-css-layout> 
+   <vaadin-horizontal-layout style-name="main-area-layout" size-full _id="main_area" :expand> 
+    <vaadin-css-layout style-name="side-bar" height-full _id="side_bar"> 
+     <vaadin-native-button icon="fonticon://FontAwesome/f080" style-name="menu-button selected" width-full plain-text _id="menuButton1">
+       Dashboard 
+     </vaadin-native-button> 
+     <vaadin-native-button icon="fonticon://FontAwesome/f0f6" style-name="menu-button" width-full plain-text _id="menuButton2">
+       Order 
+     </vaadin-native-button> 
+     <vaadin-native-button icon="fonticon://FontAwesome/f05a" style-name="menu-button" width-full plain-text _id="menuButton3">
+       About 
+     </vaadin-native-button> 
+    </vaadin-css-layout> 
+    <vaadin-panel style-name="scroll-panel" size-full _id="scroll_panel" :expand></vaadin-panel> 
+   </vaadin-horizontal-layout> 
+  </vaadin-vertical-layout>  
+ </body>
+</html>

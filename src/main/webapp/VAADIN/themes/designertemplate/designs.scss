@@ -1,0 +1,31 @@
+// NavigationTemplateVivid.html
+@import "NavigationTemplateVivid.scss";
+
+// NavigationTemplateVaadin.html
+@import "NavigationTemplateBlue.scss";
+
+// NavigationTemplateDark.html
+@import "NavigationTemplateDark.scss";
+
+// FormTemplateVivid.html
+@import "FormTemplateVivid.scss";
+
+// FormTemplateVaadin.html
+@import "FormTemplateBlue.scss";
+
+// FormTemplateDark.html
+@import "FormTemplateDark.scss";
+
+// DashboardTemplateVivid.html
+@import "DashboardTemplateVivid.scss";
+
+// DashboardTemplateVaadin.html
+@import "DashboardTemplateBlue.scss";
+
+// DashboardTemplateDark.html
+@import "DashboardTemplateDark.scss";// Styles imported from Responsive Application.html
+// Workaround for a https://dev.vaadin.com/ticket/19170 to get hidden icons in some environments to show
+#responsive-application-template.valo-menu-responsive .valo-menu-part .valo-menu-item span.v-icon {
+	opacity: 1.0;
+}
+
